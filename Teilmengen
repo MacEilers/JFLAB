@@ -1,0 +1,74 @@
+public class q {
+    public static void main(String[] args) {
+        
+    
+    String[]list =new String[5];
+    list[0]= "q0";
+    list[1]= "q1";
+    list[2]= "q2";
+    list[3]= "q3";
+    list[4]= "q4";
+    
+    String ans ="P(Q)= {LM,";
+        for (int i = 0; i < 5; i++) {
+            ans = ans +"{"+list[i]+"},";
+        }
+        for (int i = 0; i < 5; i++) {
+             
+            for (int j = i; j < 5; j++) {
+                if (i!=j) {
+                    ans = ans +"{"+list[i]+","+list[j]+"},";
+                    
+                }
+            }
+            
+            
+            
+            
+        }
+        
+        for (int i = 0; i < 5; i++) {
+            for (int j = i; j < 5; j++) {
+                if (i !=j) {
+                    
+                
+                for (int k = j; k < 5; k++) {
+                    if (j != k) {
+                        
+                    
+                    
+                    ans = ans +"{"+list[i]+","+list[j]+","+list[k]+"},";
+                    }
+                }
+                
+                }
+            }
+        }
+        for (int i = 0; i < 5; i++) {
+            for (int j = i; j < 5; j++) {
+                if (i !=j) {
+                    
+                
+                for (int k = j; k < 5; k++) {
+                    if (j != k) {
+                        
+                        for (int l = k; l < 5; l++) {
+                            if (l != k) {
+                                ans = ans +"{"+list[i]+","+list[j]+","+list[k]+","+list[l]+"},";
+                                
+                            }
+                        }
+                    
+                    
+                    
+                    }
+                }
+                
+                }
+            }
+        }
+        ans = ans +"}";
+        System.out.println(ans);
+   
+    
+}}
